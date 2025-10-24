@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hari dan Bulan dalam Bahasa Jepang</title>
+  <style>
+    body {
+      font-family: "Poppins", sans-serif;
+      margin: 0;
+      background: linear-gradient(135deg, #ffecd2, #fcb69f);
+      color: #333;
+      overflow-x: hidden;
+      transition: background 0.5s ease;
+    }
+
+    section {
+      display: none;
+      opacity: 0;
+      transition: opacity 0.5s ease;
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 30px;
+      background: #fff;
+      border-radius: 15px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+      margin-top: 40px;
+    }
+
+    section.active {
+      display: block;
+      opacity: 1;
+    }
+
+    h1, h2 {
+      text-align: center;
+      color: #ff6f61;
+    }
+
+    .menu {
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    button {
+      background-color: #ff9a8b;
+      border: none;
+      color: white;
+      padding: 12px 20px;
+      margin: 10px;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    button:hover {
+      background-color: #ff6f61;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+    }
+
+    th, td {
+      border: 1px solid #ffb6b9;
+      padding: 10px;
+      text-align: center;
+    }
+
+    th {
+      background-color: #f6abb6;
+      color: white;
+    }
+
+    tr:nth-child(even) {
+      background-color: #fff0f5;
+    }
+
+    .question {
+      margin: 20px 0;
+      background: #ffe4e1;
+      border-radius: 10px;
+      padding: 15px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 15px;
+      color: white;
+      background-color: #ff9a8b;
+      margin-top: 40px;
+    }
+
+    .score {
+      font-size: 22px;
+      font-weight: bold;
+      text-align: center;
+      color: #4caf50;
+      margin-top: 20px;
+    }
+
+    .result-message {
+      text-align: center;
+      font-size: 18px;
+      margin-top: 10px;
+      color: #ff4081;
+    }
+  </style>
+</head>
+<body>
+  <!-- COVER -->
+  <section id="cover" class="active">
+    <h1>Hari dan Bulan dalam Bahasa Jepang</h1>
+    <div class="menu">
+      <button onclick="showPage('hari')">Hari</button>
+      <button onclick="showPage('bulan')">Bulan</button>
+      <button onclick="showPage('kuis')">Latihan Soal</button>
+    </div>
+  </section>
+
+  <!-- HALAMAN HARI -->
+  <section id="hari">
+    <h2>Hari dalam Bahasa Jepang</h2>
+    <table>
+      <tr><th>Bahasa Indonesia</th><th>Bahasa Jepang</th><th>Romaji</th></tr>
+      <tr><td>Senin</td><td>月曜日</td><td>Getsuyōbi</td></tr>
+      <tr><td>Selasa</td><td>火曜日</td><td>Kayōbi</td></tr>
+      <tr><td>Rabu</td><td>水曜日</td><td>Suiyōbi</td></tr>
+      <tr><td>Kamis</td><td>木曜日</td><td>Mokuyōbi</td></tr>
+      <tr><td>Jumat</td><td>金曜日</td><td>Kinyōbi</td></tr>
+      <tr><td>Sabtu</td><td>土曜日</td><td>Doyōbi</td></tr>
+      <tr><td>Minggu</td><td>日曜日</td><td>Nichiyōbi</td></tr>
+    </table>
+    <div class="menu">
+      <button onclick="showPage('cover')">Kembali</button>
+    </div>
+  </section>
+
+  <!-- HALAMAN BULAN -->
+  <section id="bulan">
+    <h2>Bulan dalam Bahasa Jepang</h2>
+    <table>
+      <tr><th>Bahasa Indonesia</th><th>Bahasa Jepang</th><th>Romaji</th></tr>
+      <tr><td>Januari</td><td>一月</td><td>Ichigatsu</td></tr>
+      <tr><td>Februari</td><td>二月</td><td>Nigatsu</td></tr>
+      <tr><td>Maret</td><td>三月</td><td>Sangatsu</td></tr>
+      <tr><td>April</td><td>四月</td><td>Shigatsu</td></tr>
+      <tr><td>Mei</td><td>五月</td><td>Gogatsu</td></tr>
+      <tr><td>Juni</td><td>六月</td><td>Rokugatsu</td></tr>
+      <tr><td>Juli</td><td>七月</td><td>Shichigatsu</td></tr>
+      <tr><td>Agustus</td><td>八月</td><td>Hachigatsu</td></tr>
+      <tr><td>September</td><td>九月</td><td>Kugatsu</td></tr>
+      <tr><td>Oktober</td><td>十月</td><td>Jūgatsu</td></tr>
+      <tr><td>November</td><td>十一月</td><td>Jūichigatsu</td></tr>
+      <tr><td>Desember</td><td>十二月</td><td>Jūnigatsu</td></tr>
+    </table>
+    <div class="menu">
+      <button onclick="showPage('cover')">Kembali</button>
+    </div>
+  </section>
+
+  <!-- HALAMAN KUIS -->
+  <section id="kuis">
+    <h2>Latihan Soal</h2>
+
+    <div class="question">
+      <p>1. Apa bahasa Jepang dari hari Kamis?</p>
+      <label><input type="radio" name="q1" value="A" /> A. 火曜日</label><br>
+      <label><input type="radio" name="q1" value="B" /> B. 木曜日</label><br>
+      <label><input type="radio" name="q1" value="C" /> C. 水曜日</label><br>
+      <label><input type="radio" name="q1" value="D" /> D. 金曜日</label>
+    </div>
+
+    <div class="question">
+      <p>2. Bagaimana penulisan “Juli” dalam kanji Jepang?</p>
+      <label><input type="radio" name="q2" value="A" /> A. 七月</label><br>
+      <label><input type="radio" name="q2" value="B" /> B. 九月</label><br>
+      <label><input type="radio" name="q2" value="C" /> C. 十月</label><br>
+      <label><input type="radio" name="q2" value="D" /> D. 六月</label>
+    </div>
+
+    <div class="question">
+      <p>3. Apa arti dari “Nichiyōbi”?</p>
+      <label><input type="radio" name="q3" value="A" /> A. Senin</label><br>
+      <label><input type="radio" name="q3" value="B" /> B. Sabtu</label><br>
+      <label><input type="radio" name="q3" value="C" /> C. Minggu</label><br>
+      <label><input type="radio" name="q3" value="D" /> D. Kamis</label>
+    </div>
+
+    <div class="question">
+      <p>4. Sebutkan bahasa Jepang dari bulan Mei!</p>
+      <label><input type="radio" name="q4" value="A" /> A. 五月</label><br>
+      <label><input type="radio" name="q4" value="B" /> B. 六月</label><br>
+      <label><input type="radio" name="q4" value="C" /> C. 三月</label><br>
+      <label><input type="radio" name="q4" value="D" /> D. 七月</label>
+    </div>
+
+    <div class="question">
+      <p>5. Apa romaji dari 金曜日?</p>
+      <label><input type="radio" name="q5" value="A" /> A. Kayōbi</label><br>
+      <label><input type="radio" name="q5" value="B" /> B. Doyōbi</label><br>
+      <label><input type="radio" name="q5" value="C" /> C. Kinyōbi</label><br>
+      <label><input type="radio" name="q5" value="D" /> D. Nichiyōbi</label>
+    </div>
+
+    <div class="menu">
+      <button onclick="cekNilai()">Selesai</button>
+      <button onclick="showPage('cover')">Kembali</button>
+    </div>
+  </section>
+
+  <!-- HALAMAN HASIL NILAI -->
+  <section id="hasilPage">
+    <h2>🎯 Hasil Nilai Kamu 🎯</h2>
+    <div class="score" id="nilai"></div>
+    <div class="result-message" id="pesan"></div>
+    <div class="menu">
+      <button onclick="showPage('cover')">Kembali</button>
+      <button onclick="showPage('kuis')">Ulangi Kuis</button>
+    </div>
+  </section>
+
+  <footer>
+  </footer>
+
+  <script>
+    const jawabanBenar = {
+      q1: "B",
+      q2: "A",
+      q3: "C",
+      q4: "A",
+      q5: "C",
+    };
+
+    function showPage(id) {
+      document.querySelectorAll("section").forEach((sec) => {
+        sec.classList.remove("active");
+      });
+      const halaman = document.getElementById(id);
+      halaman.classList.add("active");
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+
+    function cekNilai() {
+      let skor = 0;
+      let benar = 0;
+      for (let key in jawabanBenar) {
+        const terpilih = document.querySelector(`input[name="${key}"]:checked`);
+        if (terpilih && terpilih.value === jawabanBenar[key]) {
+          skor += 20;
+          benar++;
+        }
+      }
+
+      document.getElementById("nilai").innerHTML = `Nilai kamu: ${skor} / 100<br>Jawaban benar: ${benar} dari 5`;
+      
+      let pesan = "";
+      if (skor === 100) pesan = "🌸 Sempurna! Hebat banget!";
+      else if (skor >= 60) pesan = "😊 Bagus! Terus semangat belajar!";
+      else pesan = "💪 Ayo belajar lagi, kamu pasti bisa!";
+
+      document.getElementById("pesan").textContent = pesan;
+
+      showPage("hasilPage");
+    }
+  </script>
+</body>
+</html>
